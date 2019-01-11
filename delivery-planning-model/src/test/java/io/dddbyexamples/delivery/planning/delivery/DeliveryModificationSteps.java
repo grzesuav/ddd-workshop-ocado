@@ -5,10 +5,6 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
-import io.dddbyexamples.delivery.planning.delivery.DeliveryService;
-import io.dddbyexamples.delivery.planning.delivery.Payload;
-import io.dddbyexamples.delivery.planning.delivery.ScheduleDelivery;
-import io.dddbyexamples.delivery.planning.delivery.Transport;
 import lombok.Value;
 
 import java.util.List;
