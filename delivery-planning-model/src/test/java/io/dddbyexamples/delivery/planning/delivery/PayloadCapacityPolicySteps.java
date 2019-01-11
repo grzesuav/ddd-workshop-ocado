@@ -1,10 +1,10 @@
 package io.dddbyexamples.delivery.planning.delivery;
 
-import cucumber.api.PendingException;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import io.dddbyexamples.delivery.planning.delivery.StorageUnitsAmounts.StorageUnitsAmountsBuilder;
+import org.assertj.core.api.Assertions;
 
 public class PayloadCapacityPolicySteps {
 
@@ -44,25 +44,22 @@ public class PayloadCapacityPolicySteps {
 
     @Then("^capacity is not exceeded$")
     public void capacityIsNotExceeded() throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        Assertions.assertThat(exceedingAmounts.isEmpty()).isTrue();
     }
 
     @Then("^capacity is exceeded with (\\d+) pallets$")
     public void capacityIsExceededWithPallets(int amount) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        Assertions.assertThat(exceedingAmounts.getPallets()).isEqualTo(amount);
     }
 
     @Then("^capacity is exceeded with (\\d+) cages$")
     public void capacityIsExceededWithOverCagesCages(int amount) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        Assertions.assertThat(exceedingAmounts.getCages()).isEqualTo(amount);
+
     }
 
     @Then("^capacity is exceeded with (\\d+) trailers$")
     public void capacityIsExceededWithOverTrailersTrailers(int amount) throws Throwable {
-        // Write code here that turns the phrase above into concrete actions
-        throw new PendingException();
+        Assertions.assertThat(exceedingAmounts.getTrailers()).isEqualTo(amount);
     }
 }

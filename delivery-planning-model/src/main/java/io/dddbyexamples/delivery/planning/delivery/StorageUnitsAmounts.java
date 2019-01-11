@@ -9,4 +9,8 @@ public class StorageUnitsAmounts {
     int pallets;
     int cages;
     int trailers;
+
+    public boolean isEmpty() {
+        return false;
+    }
 }
